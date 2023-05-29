@@ -13,6 +13,7 @@ export declare const CheckButton: import("../utils").WithInstall<import("vue").D
     };
     round: BooleanConstructor;
     disabled: BooleanConstructor;
+    readonly: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -40,6 +41,7 @@ export declare const CheckButton: import("../utils").WithInstall<import("vue").D
     };
     round: BooleanConstructor;
     disabled: BooleanConstructor;
+    readonly: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -60,6 +62,7 @@ export declare const CheckButton: import("../utils").WithInstall<import("vue").D
     round: boolean;
     disabled: boolean;
     modelValue: any;
+    readonly: boolean;
     row: number;
     single: boolean;
     options: any;

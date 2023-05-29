@@ -14,6 +14,7 @@ export declare const checkButtonProps: {
     };
     round: BooleanConstructor;
     disabled: BooleanConstructor;
+    readonly: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -43,6 +44,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     round: BooleanConstructor;
     disabled: BooleanConstructor;
+    readonly: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -70,6 +72,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     round: BooleanConstructor;
     disabled: BooleanConstructor;
+    readonly: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -90,6 +93,7 @@ declare const _default: import("vue").DefineComponent<{
     round: boolean;
     disabled: boolean;
     modelValue: any;
+    readonly: boolean;
     row: number;
     single: boolean;
     options: any;

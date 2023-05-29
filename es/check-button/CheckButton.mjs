@@ -18,6 +18,7 @@ const checkButtonProps = {
   },
   round: Boolean,
   disabled: Boolean,
+  readonly: Boolean,
   single: Boolean,
   horizon: Boolean,
   row: {
@@ -62,10 +63,11 @@ var stdin_default = defineComponent({
       const {
         modelValue,
         disabled,
+        readonly,
         disabledItems,
         single
       } = props;
-      if (!disabled && !(disabledItems == null ? void 0 : disabledItems.includes(value))) {
+      if (!disabled && !readonly && !(disabledItems == null ? void 0 : disabledItems.includes(value))) {
         const newValue = single ? value : modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value];
         updateValue(newValue, true);
       }

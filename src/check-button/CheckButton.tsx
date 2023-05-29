@@ -33,6 +33,7 @@ export const checkButtonProps = {
   },
   round: Boolean,
   disabled: Boolean,
+  readonly: Boolean,
   single: Boolean,
   horizon: Boolean,
   row: {
@@ -81,8 +82,8 @@ export default defineComponent({
     };
 
     const selectItem = (value: CheckButtonValue) => () => {
-      const { modelValue, disabled, disabledItems, single } = props;
-      if (!disabled && !disabledItems?.includes(value)) {
+      const { modelValue, disabled, readonly, disabledItems, single } = props;
+      if (!disabled && !readonly && !disabledItems?.includes(value)) {
         const newValue = single ? value : modelValue.includes(value) ? modelValue.filter((item: CheckButtonValue) => item !== value) : [...modelValue, value];
         updateValue(newValue, true);
       }
