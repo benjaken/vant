@@ -101,6 +101,14 @@ export declare const Field: import("../utils").WithInstall<import("vue").DefineC
         type: ArrayConstructor;
         value: never[];
     };
+    inlineBlock: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
+    inputWidth: {
+        type: (NumberConstructor | StringConstructor)[];
+        value: string;
+    };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("clear" | "focus" | "blur" | "keypress" | "clickInput" | "endValidate" | "startValidate" | "clickLeftIcon" | "clickRightIcon" | "update:modelValue")[], "clear" | "focus" | "blur" | "keypress" | "clickInput" | "endValidate" | "startValidate" | "clickLeftIcon" | "clickRightIcon" | "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     tag: {
         type: import("vue").PropType<keyof HTMLElementTagNameMap>;
@@ -203,6 +211,14 @@ export declare const Field: import("../utils").WithInstall<import("vue").DefineC
         type: ArrayConstructor;
         value: never[];
     };
+    inlineBlock: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
+    inputWidth: {
+        type: (NumberConstructor | StringConstructor)[];
+        value: string;
+    };
 }>> & {
     onFocus?: ((...args: any[]) => any) | undefined;
     onBlur?: ((...args: any[]) => any) | undefined;
@@ -234,6 +250,7 @@ export declare const Field: import("../utils").WithInstall<import("vue").DefineC
     showWordLimit: boolean;
     colon: boolean;
     showTip: boolean;
+    inlineBlock: boolean;
 }>>;
 export default Field;
 export { fieldProps } from './Field';

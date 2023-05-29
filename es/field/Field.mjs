@@ -69,6 +69,14 @@ const fieldProps = extend({}, cellSharedProps, fieldSharedProps, {
   passwordTip: {
     type: Array,
     value: []
+  },
+  inlineBlock: {
+    type: Boolean,
+    value: false
+  },
+  inputWidth: {
+    type: numericProp,
+    value: ""
   }
 });
 var stdin_default = defineComponent({
@@ -556,7 +564,10 @@ var stdin_default = defineComponent({
       }
     };
     const renderFieldBody = () => [_createVNode("div", {
-      "class": bem("body")
+      "class": bem("body"),
+      "style": props.inputWidth ? {
+        width: addUnit(props.inputWidth)
+      } : void 0
     }, [renderInput(), showClear.value && _createVNode(Icon, {
       "ref": clearIconRef,
       "name": props.clearIcon,
@@ -609,7 +620,8 @@ var stdin_default = defineComponent({
         "class": bem({
           error: showError.value,
           disabled,
-          [`label-${labelAlign}`]: labelAlign
+          [`label-${labelAlign}`]: labelAlign,
+          "inline-block": props.inlineBlock
         }),
         "center": props.center,
         "border": props.border,

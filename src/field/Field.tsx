@@ -136,6 +136,14 @@ export const fieldProps = extend({}, cellSharedProps, fieldSharedProps, {
     type: Array,
     value: [],
   },
+  inlineBlock: {
+    type: Boolean,
+    value: false,
+  },
+  inputWidth: {
+    type: numericProp,
+    value: '',
+  }
 });
 
 export type FieldProps = ExtractPropTypes<typeof fieldProps>;
@@ -733,7 +741,11 @@ export default defineComponent({
     };
 
     const renderFieldBody = () => [
-      <div class={bem('body')}>
+      <div class={bem('body')} style={
+        props.inputWidth
+          ? { width: addUnit(props.inputWidth) }
+          : undefined
+      }>
         {renderInput()}
         {showClear.value && (
           <Icon
@@ -811,6 +823,7 @@ export default defineComponent({
             error: showError.value,
             disabled,
             [`label-${labelAlign}`]: labelAlign,
+            'inline-block': props.inlineBlock
           })}
           center={props.center}
           border={props.border}

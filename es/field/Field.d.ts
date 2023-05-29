@@ -145,6 +145,14 @@ export declare const fieldProps: {
         type: ArrayConstructor;
         value: never[];
     };
+    inlineBlock: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
+    inputWidth: {
+        type: (NumberConstructor | StringConstructor)[];
+        value: string;
+    };
 };
 export type FieldProps = ExtractPropTypes<typeof fieldProps>;
 declare const _default: import("vue").DefineComponent<{
@@ -249,6 +257,14 @@ declare const _default: import("vue").DefineComponent<{
         type: ArrayConstructor;
         value: never[];
     };
+    inlineBlock: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
+    inputWidth: {
+        type: (NumberConstructor | StringConstructor)[];
+        value: string;
+    };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("clear" | "focus" | "blur" | "keypress" | "clickInput" | "endValidate" | "startValidate" | "clickLeftIcon" | "clickRightIcon" | "update:modelValue")[], "clear" | "focus" | "blur" | "keypress" | "clickInput" | "endValidate" | "startValidate" | "clickLeftIcon" | "clickRightIcon" | "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<ExtractPropTypes<{
     tag: {
         type: PropType<keyof HTMLElementTagNameMap>;
@@ -351,6 +367,14 @@ declare const _default: import("vue").DefineComponent<{
         type: ArrayConstructor;
         value: never[];
     };
+    inlineBlock: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
+    inputWidth: {
+        type: (NumberConstructor | StringConstructor)[];
+        value: string;
+    };
 }>> & {
     onFocus?: ((...args: any[]) => any) | undefined;
     onBlur?: ((...args: any[]) => any) | undefined;
@@ -382,5 +406,6 @@ declare const _default: import("vue").DefineComponent<{
     showWordLimit: boolean;
     colon: boolean;
     showTip: boolean;
+    inlineBlock: boolean;
 }>;
 export default _default;

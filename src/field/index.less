@@ -76,6 +76,34 @@
     }
   }
 
+  &--inline-block {
+    display: inline-block;
+    width: auto;
+    padding: var(--van-padding-base) 0 !important;
+    background: none;
+
+    &::after {
+      border-bottom: none;
+    }
+  
+    .van-field__label,
+    .van-field__value,
+    .van-field__body {
+      display: inline-block;
+    }
+  
+    .van-field__control {
+      background: var(--van-background);
+      padding: var(--van-padding-base) var(--van-padding-sm);
+      margin-right: var(--van-padding-base);
+  
+      &--custom {
+        background: none;
+        padding: 0;
+      }
+    }
+  }
+
   &__value {
     overflow: visible;
   }
