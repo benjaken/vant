@@ -799,6 +799,7 @@ export default defineComponent({
 
     return () => {
       const disabled = getProp('disabled');
+      const readonly = getProp('readonly');
       const labelAlign = getProp('labelAlign');
       const LeftIcon = renderLeftIcon();
 
@@ -822,6 +823,7 @@ export default defineComponent({
           class={bem({
             error: showError.value,
             disabled,
+            readonly,
             [`label-${labelAlign}`]: labelAlign,
             'inline-block': props.inlineBlock
           })}
