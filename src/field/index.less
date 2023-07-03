@@ -38,6 +38,7 @@
   overflow: visible;
 
   &__label {
+    position: relative;
     flex: none;
     box-sizing: border-box;
     width: var(--van-field-label-width);
@@ -48,10 +49,18 @@
 
     &--center {
       text-align: center;
+
+      &.van-field__label--required::before {
+        position: relative;
+      }
     }
 
     &--right {
       text-align: right;
+
+      &.van-field__label--required::before {
+        position: relative;
+      }
     }
 
     &--top {
@@ -67,6 +76,12 @@
         margin-right: 2px;
         color: var(--van-field-required-mark-color);
         content: '*';
+        position: absolute;
+        left: 0;
+        transform: translateX(-100%);
+      }
+      &--center, &--right::before{
+        position: relative;
       }
     }
   }
