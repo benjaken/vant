@@ -27,6 +27,10 @@ export declare const checkButtonProps: {
         type: ArrayConstructor;
         default: () => never[];
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
 };
 export type CheckButtonProps = ExtractPropTypes<typeof checkButtonProps>;
 declare const _default: import("vue").DefineComponent<{
@@ -57,6 +61,10 @@ declare const _default: import("vue").DefineComponent<{
         type: ArrayConstructor;
         default: () => never[];
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change")[], "update:modelValue" | "change", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<ExtractPropTypes<{
     options: {
         type: any;
@@ -85,6 +93,10 @@ declare const _default: import("vue").DefineComponent<{
         type: ArrayConstructor;
         default: () => never[];
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
 }>> & {
     onChange?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
@@ -92,6 +104,7 @@ declare const _default: import("vue").DefineComponent<{
     label: string;
     round: boolean;
     disabled: boolean;
+    size: string;
     modelValue: any;
     readonly: boolean;
     row: number;

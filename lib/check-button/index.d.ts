@@ -26,6 +26,10 @@ export declare const CheckButton: import("../utils").WithInstall<import("vue").D
         type: ArrayConstructor;
         default: () => never[];
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change")[], "update:modelValue" | "change", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     options: {
         type: any;
@@ -54,6 +58,10 @@ export declare const CheckButton: import("../utils").WithInstall<import("vue").D
         type: ArrayConstructor;
         default: () => never[];
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
 }>> & {
     onChange?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
@@ -61,6 +69,7 @@ export declare const CheckButton: import("../utils").WithInstall<import("vue").D
     label: string;
     round: boolean;
     disabled: boolean;
+    size: string;
     modelValue: any;
     readonly: boolean;
     row: number;

@@ -1,6 +1,9 @@
 :root {
   --van-check-button-height: 30px;
+  --van-check-button-height-small: 24px;
+  --van-check-button-border-radius-small: var(--van-radius-sm);
   --van-check-button-border-radius: var(--van-radius-md);
+  --van-check-button-font-size-small: var(--van-font-size-sm);
   --van-check-button-font-size: var(--van-font-size-md);
   --van-check-button-color: var(--van-text-color);
   --van-check-button-background: var(--van-gray-2);
@@ -22,7 +25,7 @@
   width: 100%;
   flex: 1;
   display: flex;
-  overflow: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
 
@@ -78,6 +81,13 @@
     &--active {
       background: var(--van-check-button-active-background);
       color: var(--van-check-button-active-color);
+    }
+
+    &--small {
+      height: var(--van-check-button-height-small);
+      line-height: var(--van-check-button-height-small);
+      font-size: var(--van-check-button-font-size-small);
+      border-radius: var(--van-check-button-border-radius-small);
     }
   }
 }

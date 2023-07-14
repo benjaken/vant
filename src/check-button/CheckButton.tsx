@@ -45,6 +45,10 @@ export const checkButtonProps = {
   disabledItems: {
     type: Array,
     default: () => [],
+  },
+  size: {
+    type: String,
+    default: 'normal'
   }
 };
 
@@ -63,10 +67,14 @@ export default defineComponent({
     const root = ref<HTMLElement>();
 
     const itemStyle = (index: number): CSSProperties => {
-      const { row, horizon } = props;
+      const { row, horizon, options } = props;
       const style: CSSProperties = {};
       style.flex = `0 0 ${100 / row - 1}%`;
       style.marginRight = (index + 1) % row === 0 && !horizon ? '0' : (row / (row - 1) + '%');
+      const lastStart = options.length % row === 0 ? options.length - row : Math.floor(options.length / row) * row
+      if (index >= lastStart || horizon) {
+        style.marginBottom = '0';
+      }
       return style;
     };
 
@@ -90,13 +98,14 @@ export default defineComponent({
     };
 
     const renderButtons = () => {
-      const { single, label, options, needIndex, round, modelValue, disabledItems = [] } = props;
+      const { single, size, label, options, needIndex, round, modelValue, disabledItems = [] } = props;
       return options.map((item: { [x: string]: any; value: CheckButtonValue; }, index: number) => (
           <div
             class={bem('item', {
               active: single ? modelValue === (needIndex ? index : item.value) : modelValue.includes((needIndex ? index : item.value)),
               disabled: disabledItems.includes(item.value),
               round,
+              small: size === 'small',
             })}
             style={itemStyle(index)}
             onClick={selectItem(needIndex ? index : item.value)}
