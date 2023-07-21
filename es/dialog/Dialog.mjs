@@ -146,6 +146,7 @@ var stdin_default = defineComponent({
         "class": classNames
       }, [content, theme === "input" ? _createVNode("input", {
         "class": bem("input"),
+        "value": inputValue.value,
         "placeholder": inputPlaceholder,
         "onBlur": validateInput,
         "onInput": onInput

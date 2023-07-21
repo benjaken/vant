@@ -204,6 +204,7 @@ export default defineComponent({
           {theme === 'input' ? (
             <input
               class={bem('input')}
+              value={inputValue.value}
               placeholder={inputPlaceholder}
               onBlur={validateInput}
               onInput={onInput}
