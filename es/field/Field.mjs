@@ -368,7 +368,8 @@ var stdin_default = defineComponent({
       const controlClass = bem("control", [getProp("inputAlign"), {
         error: showError.value,
         custom: !!slots.input,
-        "min-height": props.type === "textarea" && !props.autosize
+        "min-height": props.type === "textarea" && !props.autosize,
+        inline: props.inlineBlock && !slots.input
       }]);
       if (slots.input) {
         return _createVNode("div", {

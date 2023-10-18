@@ -115,10 +115,12 @@
     }
   
     .van-field__control {
-      background: var(--van-background);
-      border: 1px solid var(--van-border-color);
-      padding: var(--van-padding-base) var(--van-padding-sm);
-      margin-right: var(--van-padding-base);
+      &--inline {
+        background: var(--van-background);
+        border: 1px solid var(--van-border-color);
+        padding: var(--van-padding-base) var(--van-padding-sm);
+        margin-right: var(--van-padding-base);
+      }
 
       &--error {
         border-color: var(--van-danger-color);

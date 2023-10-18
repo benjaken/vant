@@ -96,7 +96,7 @@
 .van-field--inline-block .van-field__body {
   display: inline-block;
 }
-.van-field--inline-block .van-field__control {
+.van-field--inline-block .van-field__control--inline {
   background: var(--van-background);
   border: 1px solid var(--van-border-color);
   padding: var(--van-padding-base) var(--van-padding-sm);
