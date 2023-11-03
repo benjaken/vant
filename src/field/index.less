@@ -116,7 +116,6 @@
   
     .van-field__control {
       &--inline {
-        background: var(--van-background);
         border: 1px solid var(--van-border-color);
         padding: var(--van-padding-base) var(--van-padding-sm);
         margin-right: var(--van-padding-base);
@@ -129,6 +128,12 @@
       &--custom {
         background: none;
         padding: 0;
+      }
+    }
+
+    &.van-field--readonly {
+      .van-field__control--inline {
+        background: var(--van-background);
       }
     }
   }

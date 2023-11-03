@@ -1909,7 +1909,6 @@ ul {
   display: inline-block;
 }
 .van-field--inline-block .van-field__control--inline {
-  background: var(--van-background);
   border: 1px solid var(--van-border-color);
   padding: var(--van-padding-base) var(--van-padding-sm);
   margin-right: var(--van-padding-base);
@@ -1920,6 +1919,9 @@ ul {
 .van-field--inline-block .van-field__control--custom {
   background: none;
   padding: 0;
+}
+.van-field--inline-block.van-field--readonly .van-field__control--inline {
+  background: var(--van-background);
 }
 .van-field__value {
   overflow: visible;
