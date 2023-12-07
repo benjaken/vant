@@ -119,6 +119,10 @@
         border: 1px solid var(--van-border-color);
         padding: var(--van-padding-base) var(--van-padding-sm);
         margin-right: var(--van-padding-base);
+
+        &:focus {
+          border-color: var(--van-primary-color);
+        }
       }
 
       &--error {
@@ -133,7 +137,15 @@
 
     &.van-field--readonly {
       .van-field__control--inline {
-        background: var(--van-background);
+        background: var(--van-gray-3);
+
+        &:focus {
+          border-color: var(--van-gray-5);
+        }
+      }
+
+      &.van-cell--clickable .van-field__control--inline {
+        background: none;
       }
     }
   }
@@ -195,11 +207,6 @@
       min-height: var(--van-cell-line-height);
     }
 
-    &--error,
-    &--error::placeholder {
-      color: var(--van-field-input-error-text-color);
-      -webkit-text-fill-color: currentColor;
-    }
 
     &--min-height {
       min-height: var(--van-field-text-area-min-height);
