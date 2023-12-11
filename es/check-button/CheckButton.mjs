@@ -19,6 +19,7 @@ const checkButtonProps = {
   round: Boolean,
   disabled: Boolean,
   readonly: Boolean,
+  cancelable: Boolean,
   single: Boolean,
   horizon: Boolean,
   row: {
@@ -74,11 +75,17 @@ var stdin_default = defineComponent({
         disabled,
         readonly,
         disabledItems,
-        single
+        single,
+        cancelable
       } = props;
       if (!disabled && !readonly && !(disabledItems == null ? void 0 : disabledItems.includes(value))) {
-        const newValue = single ? value : modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value];
-        updateValue(newValue, true);
+        if (single) {
+          updateValue(cancelable && modelValue === value ? "" : value, true);
+        } else {
+          updateValue(
+            modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value], true
+          );
+        }
       }
     };
     const renderButtons = () => {
@@ -94,7 +101,7 @@ var stdin_default = defineComponent({
       } = props;
       return options.map((item, index) => _createVNode("div", {
         "class": bem("item", {
-          active: single ? modelValue === (needIndex ? index : item.value) : modelValue.includes(needIndex ? index : item.value),
+          active: single ? modelValue == (needIndex ? index : item.value) : modelValue.includes(needIndex ? index : item.value),
           disabled: disabledItems.includes(item.value),
           round,
           small: size === "small"

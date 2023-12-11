@@ -5150,7 +5150,7 @@ ul {
   --van-check-button-background: var(--van-gray-2);
   --van-check-button-active-background: var(--van-primary-color);
   --van-check-button-active-color: var(--van-white);
-  --van-check-button-disabled-background: var(--van-gray-3);
+  --van-check-button-disabled-opacity: var(--van-disabled-opacity);
   --van-check-button-width: 80px;
   --van-check-button-margin-right: 2%;
   --van-check-button-horizon-margin-right: 16px;
@@ -5158,7 +5158,6 @@ ul {
 }
 .van-theme-dark {
   --van-check-button-background: --van-gray-8;
-  --van-check-button-disabled-background: --van-gray-7;
 }
 .van-check-button {
   width: 100%;
@@ -5175,9 +5174,7 @@ ul {
 }
 .van-check-button__content--disabled .van-check-button__item {
   cursor: not-allowed;
-}
-.van-check-button__content--disabled .van-check-button__item--active {
-  background: var(--van-check-button-disabled-background) !important;
+  opacity: var(--van-check-button-disabled-opacity) !important;
 }
 .van-check-button__content--horizon {
   justify-content: flex-start;

@@ -260,7 +260,7 @@ import type { CheckButtonProps } from 'vant';
 | --van-check-button-background          | _var(--van-gray-2)_            | -    |
 | --van-check-button-active-background   | _var(--van-primary-color)_     | -    |
 | --van-check-button-active-color        | _var(--van-white)_             | -    |
-| --van-check-button-disabled-background | _var(--van-gray-3)_            | -    |
+| --van-check-button-disabled-opacity | _var(--van-disabled-opacity)_            | -    |
 | --van-check-button-width               | _80px_                         | -    |
 | --van-check-button-margin-right        | _2%_                           | -    |
 | --van-check-button-horizon-margin-right| _16px_                         | -    |

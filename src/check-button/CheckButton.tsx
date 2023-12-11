@@ -34,6 +34,7 @@ export const checkButtonProps = {
   round: Boolean,
   disabled: Boolean,
   readonly: Boolean,
+  cancelable: Boolean,
   single: Boolean,
   horizon: Boolean,
   row: {
@@ -90,10 +91,22 @@ export default defineComponent({
     };
 
     const selectItem = (value: CheckButtonValue) => () => {
-      const { modelValue, disabled, readonly, disabledItems, single } = props;
+      const {
+        modelValue,
+        disabled,
+        readonly,
+        disabledItems,
+        single,
+        cancelable,
+      } = props;
       if (!disabled && !readonly && !disabledItems?.includes(value)) {
-        const newValue = single ? value : modelValue.includes(value) ? modelValue.filter((item: CheckButtonValue) => item !== value) : [...modelValue, value];
-        updateValue(newValue, true);
+        if (single) {
+          updateValue(cancelable && modelValue === value ? "" : value, true);
+        } else {
+          updateValue(
+            modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value], true
+          );
+        }
       }
     };
 
@@ -102,7 +115,7 @@ export default defineComponent({
       return options.map((item: { [x: string]: any; value: CheckButtonValue; }, index: number) => (
           <div
             class={bem('item', {
-              active: single ? modelValue === (needIndex ? index : item.value) : modelValue.includes((needIndex ? index : item.value)),
+              active: single ? modelValue == (needIndex ? index : item.value) : modelValue.includes((needIndex ? index : item.value)),
               disabled: disabledItems.includes(item.value),
               round,
               small: size === 'small',
