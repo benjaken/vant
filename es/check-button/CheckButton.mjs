@@ -82,9 +82,7 @@ var stdin_default = defineComponent({
         if (single) {
           updateValue(cancelable && modelValue === value ? "" : value, true);
         } else {
-          updateValue(
-            modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value], true
-          );
+          updateValue(modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value], true);
         }
       }
     };

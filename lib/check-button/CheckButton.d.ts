@@ -15,6 +15,7 @@ export declare const checkButtonProps: {
     round: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
+    cancelable: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -49,6 +50,7 @@ declare const _default: import("vue").DefineComponent<{
     round: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
+    cancelable: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -81,6 +83,7 @@ declare const _default: import("vue").DefineComponent<{
     round: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
+    cancelable: BooleanConstructor;
     single: BooleanConstructor;
     horizon: BooleanConstructor;
     row: {
@@ -110,6 +113,7 @@ declare const _default: import("vue").DefineComponent<{
     row: number;
     single: boolean;
     options: any;
+    cancelable: boolean;
     horizon: boolean;
     needIndex: boolean;
     disabledItems: unknown[];

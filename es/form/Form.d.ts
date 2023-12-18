@@ -4,7 +4,10 @@ export declare const formProps: {
     colon: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
-    showError: BooleanConstructor;
+    showError: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
     labelWidth: (NumberConstructor | StringConstructor)[];
     labelAlign: PropType<FieldTextAlign>;
     inputAlign: PropType<FieldTextAlign>;
@@ -29,7 +32,10 @@ declare const _default: import("vue").DefineComponent<{
     colon: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
-    showError: BooleanConstructor;
+    showError: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
     labelWidth: (NumberConstructor | StringConstructor)[];
     labelAlign: PropType<FieldTextAlign>;
     inputAlign: PropType<FieldTextAlign>;
@@ -52,7 +58,10 @@ declare const _default: import("vue").DefineComponent<{
     colon: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
-    showError: BooleanConstructor;
+    showError: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
     labelWidth: (NumberConstructor | StringConstructor)[];
     labelAlign: PropType<FieldTextAlign>;
     inputAlign: PropType<FieldTextAlign>;

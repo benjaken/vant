@@ -3,7 +3,10 @@ export declare const Form: import("../utils").WithInstall<import("vue").DefineCo
     colon: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
-    showError: BooleanConstructor;
+    showError: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
     labelWidth: (NumberConstructor | StringConstructor)[];
     labelAlign: import("vue").PropType<import("..").FieldTextAlign>;
     inputAlign: import("vue").PropType<import("..").FieldTextAlign>;
@@ -26,7 +29,10 @@ export declare const Form: import("../utils").WithInstall<import("vue").DefineCo
     colon: BooleanConstructor;
     disabled: BooleanConstructor;
     readonly: BooleanConstructor;
-    showError: BooleanConstructor;
+    showError: {
+        type: BooleanConstructor;
+        value: boolean;
+    };
     labelWidth: (NumberConstructor | StringConstructor)[];
     labelAlign: import("vue").PropType<import("..").FieldTextAlign>;
     inputAlign: import("vue").PropType<import("..").FieldTextAlign>;

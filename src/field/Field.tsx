@@ -515,6 +515,7 @@ export default defineComponent({
           error: showError.value,
           custom: !!slots.input,
           'min-height': props.type === 'textarea' && !props.autosize,
+          inline: props.inlineBlock && !slots.input
         },
       ]);
 

@@ -104,7 +104,7 @@ export default defineComponent({
           updateValue(cancelable && modelValue === value ? "" : value, true);
         } else {
           updateValue(
-            modelValue.includes(value) ? modelValue.filter((item) => item !== value) : [...modelValue, value], true
+            modelValue.includes(value) ? modelValue.filter((item: string) => item !== value) : [...modelValue, value], true
           );
         }
       }
